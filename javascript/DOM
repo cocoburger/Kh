@@ -434,7 +434,7 @@
                     tr.appendChild(td);
                 }
             
-                e.target.parentElement.parentElement.insertAdjacentElement("afterend",tr);  //이벤트가 발생된 태그
+                e.target.parentElement.parentElement.insertAdjacentElement("afterend",tr);  //이벤트가 발생된 태그  
             });
         }
     </script>
