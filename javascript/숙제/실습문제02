@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="di" style="width: 100px; height: 100px; border: 1px solid black;"></div>
+    <input type="color" id="selectColor">
+    <button onclick="colorChange();">변경</button>
+    <script>
+        colorChange=()=>{
+            const div = document.getElementById("di");
+            const input = document.getElementById("selectColor").value;
+            div.style.backgroundColor=input;
+            
+        }
+
+
+    </script>
+    <br><br><br><br>
+    <div id="d"></div><br>
+    <button onclick="size1();">50x50</button>
+    <button onclick="size2();">원본(100x100)</button>
+    <button onclick="size3();">200x200</button>
+
+    <script>
+        size1=()=>{
+            const div = document.getElementById("d");
+            div.style.width="50px";
+            div.style.height="50px";
+            div.style.backgroundColor="black";
+        }
+        size2=()=>{
+            const div = document.getElementById("d");
+            div.style.width="100px";
+            div.style.height="100px";
+            div.style.backgroundColor="black";
+        }
+        size3=()=>{
+            const div = document.getElementById("d");
+            div.style.width="200px";
+            div.style.height="200px";
+            div.style.backgroundColor="black";
+        }
+    </script>
+</body>
+</html>
+
+
