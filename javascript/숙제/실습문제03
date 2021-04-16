@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<style>
+    #squre{
+        border: 1px solid black;
+        height: 150px;
+        margin-top: 30px;
+        background: rgb(250, 250, 145);
+    }
+</style>
+<html>
+    <P>단, 구매자는 태그 이름으로 접근, 상품명은 아이디로 접근, 구매가격은 name값으로 접근할 것</P>
+    <label>구매자 : <input class="iphone" type="text" placeholder="구매자의 이름을 입력하세요"> 
+    </label><br><br>
+
+    <label>상품명 : 
+    <input class="iphone" type="text" placeholder="구매 상품명을 입력하세요">
+    </label><br><br>
+    
+    <label>가격 : 
+    <input class="iphone" type="text" placeholder="구매 가격을 입력하세요">
+    </label>
+    <br><br>
+    <button onclick="print();">입력값 출력하기</button><br>
+    
+    <div id="squre"></div>
+    
+    <script>
+        const print=()=>{
+            let name = document.getElementsByClassName("iphone");
+            console.log(name);
+            let squre = document.getElementById("squre");
+            squre.innerHTML=`구매자 : ${name[0].value}<br>`;
+            squre.innerHTML+=`상품명 : ${name[1].value}<br>`;
+            squre.innerHTML+=`가격 : ${name[2].value}만원`;
+           
+            console.log(squre);
+        }
+    </script>
+
+</body>
+</html>
